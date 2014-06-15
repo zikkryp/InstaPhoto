@@ -1,0 +1,88 @@
+﻿<UserControl
+    x:Class="InstaPhoto.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InstaPhoto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="768"
+    d:DesignWidth="200">
+    <UserControl.Resources>
+        <Style x:Key="MenuItemStyle" TargetType="ListViewItem">
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="TabNavigation" Value="Local"/>
+            <Setter Property="IsHoldingEnabled" Value="True"/>
+            <Setter Property="Margin" Value="0,0,18,2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter ContentMargin="4" ContentTransitions="{TemplateBinding ContentTransitions}" DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" FocusBorderBrush="{ThemeResource ListViewItemFocusBorderThemeBrush}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" PointerOverBackgroundMargin="1" PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" PointerOverBackground="{ThemeResource ListViewItemPointerOverBackgroundThemeBrush}" ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}" SelectedPointerOverBorderBrush="{ThemeResource ListViewItemSelectedPointerOverBorderThemeBrush}" SelectionCheckMarkVisualEnabled="True" SelectedForeground="{ThemeResource ListViewItemSelectedForegroundThemeBrush}" SelectedPointerOverBackground="{ThemeResource ListViewItemSelectedPointerOverBackgroundThemeBrush}" SelectedBorderThickness="{ThemeResource ListViewItemCompactSelectedBorderThemeThickness}" SelectedBackground="#FF177BB4" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#FF2E2E2E">
+        <ListView Width="150"  VerticalAlignment="Center" HorizontalAlignment="Left" ItemContainerStyle="{StaticResource MenuItemStyle}" SelectionChanged="ListView_SelectionChanged">
+            <ListViewItem>
+                <Grid Width="120" Height="140">
+                    <Image Source="Images/home-128.png" Height="64" Width="64" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem>
+                <Grid Width="120" Height="140">
+                    <Image Source="Images/star-128.png" Height="64" Width="64"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem>
+                <Grid Background="#396892" Width="120" Height="140">
+                    <Image Source="Images/slr_camera-128.png" Height="64" Width="64"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem>
+                <Grid Width="120" Height="140">
+                    <Image Source="Images/like-128.png" Height="64" Width="64"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem>
+                <Grid Width="120" Height="140">
+                    <Image Source="Images/businessman-128.png" Height="64" Width="64"/>
+                </Grid>
+            </ListViewItem>
+        </ListView>
+
+        <!--<StackPanel VerticalAlignment="Center">
+            <Button HorizontalAlignment="Stretch" Height="153">
+                <Button.Content>
+                    <Image Source="Images/home-48.png" Height="64" Width="64"/>
+                </Button.Content>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Height="153">
+                <Button.Content>
+                    <Image Source="Images/star-64.png" Height="64" Width="64"/>
+                </Button.Content>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Height="153">
+                <Button.Content>
+                    <Image Source="Images/slr_camera-64.png" Height="64" Width="64"/>
+                </Button.Content>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Height="153">
+                <Button.Content>
+                    <Image Source="Images/like-64.png" Height="64" Width="64"/>
+                </Button.Content>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Height="153">
+                <Button.Content>
+                    <Image Source="Images/businessman-64.png" Height="64" Width="64"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>-->
+    </Grid>
+</UserControl>
